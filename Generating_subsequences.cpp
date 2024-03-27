@@ -17,10 +17,10 @@ void process(int pos)
         return;
     }
 
-    is_taken[pos] = false;    // Do not taken
+    is_taken[pos] = false;    // Do not take
     process(pos + 1);
 
-    is_taken[pos] = true;    //  Taken
+    is_taken[pos] = true;    //  Take
     process(pos + 1);
 }
 
