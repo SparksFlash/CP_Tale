@@ -22,6 +22,7 @@ bool is_almost_prime(int n)
 {
     for (int i = 0; i <= n; i++)
     {
+        
     }
 }
 
