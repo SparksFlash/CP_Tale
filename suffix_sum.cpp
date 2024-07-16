@@ -2,7 +2,7 @@
 using namespace std;
 const int N = 1e5 + 9;
 int a[N];
-long long prefix_sum[N];
+int suffix_sum[N];
 
 int main()
 {
@@ -11,9 +11,9 @@ int main()
     for (int i = 1; i <= n; i++)
         cin >> a[i];
 
-    prefix_sum[0] = 0;
-    for (int i = 1; i <= n; i++)
-        prefix_sum[i] = prefix_sum[i - 1] + a[i];
+    suffix_sum[n + 1] = 0; // Initialize suffix_sum beyond the last element to 0
+    for (int i = n; i >= 1; i--)
+        suffix_sum[i] = suffix_sum[i + 1] + a[i];
 
     int q;
     cin >> q;
@@ -23,8 +23,7 @@ int main()
         cin >> l >> r;
         l++;
         r++;
-        long long sum = 0;
-        sum = prefix_sum[r] - prefix_sum[l - 1];
-        cout << sum << '\n';
+        int sum = suffix_sum[l] - suffix_sum[r + 1];
+        cout << sum << '\n'; // Output the result
     }
 }
