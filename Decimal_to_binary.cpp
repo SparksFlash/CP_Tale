@@ -1,6 +1,5 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
-
 int convertToBinary(int n)
 {
 
@@ -20,11 +19,8 @@ int convertToBinary(int n)
 
 int main()
 {
-
     int n;
     cin >> n;
-
     cout << convertToBinary(n) << endl;
-
     return 0;
 }
