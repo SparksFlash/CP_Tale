@@ -1,8 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
-const int N = 1e5 + 9;
+const int N = 2e5 + 9;
 int a[N];
-long long prefix_xor[N];
+int prefix_xor[N];
 
 int main()
 {
