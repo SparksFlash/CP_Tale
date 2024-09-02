@@ -102,6 +102,7 @@ string infixToPrefix(string infix)
 
 int main()
 {
-    string s = ("x+y*z/w+u");
+    string s = ("A+B*C/D+E");
     cout << infixToPrefix(s) << '\n';
+    cout << infixToPostfix(s) << '\n';
 }
